@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hello(=•ω＜=)</title>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=yes"/>
+		<link rel="stylesheet" href="../css/style1.css"/>
+	</head>
+	<body>
+		<div class="main">
+		<div class="cover">
+		<div class="box1">
+			<span>WELCOME</span>
+		</div>
+		<div class="back"></div>
+		<div class="intro">
+			<h2>Krypton's<br>Cyber Yuurei Station</h2>
+		</div>
+		</div>
+		<div class="navi">
+			<div class="log1"></div>
+			<div class="log2"></div>
+			<div class="log3"></div>
+			<ul class="bot">
+				<li><a  href="./Krypton.html">ABOUT</a></li>
+				<li><a  href="./skill.html">SKILL</a></li>
+				<li><a  href="./sparkle.html">SPARKLE</a></li>
+				<li><a  href="./contact.html">CONTACT</a></li>
+			</ul>
+		</div>
+		
+		<div class="card">
+			
+			<h2>Krypton</h2>
+			<span>月が電子バラを照らしています</span>
+			<div class="box2">
+			<button>coding</button>
+			<button>曲艺</button>
+			<button>中二期</button>
+			<button>平面设计</button>
+			<button>创作系</button>
+			<button>FGO</button>
+</div>			
+		</div>
+		
+		<div class="side1"></div>
+		<div class="side2"></div>
+		<div class="text1">
+			<p><h2>✧⁺⸜(●˙▾˙●)⸝⁺✧ 欢迎来到赛博幽灵站 ✧⁺⸜(●˙▾˙●)⸝⁺✧</h2>
+
+这里是Krypton，无质量史山代码制造姬&高强度灵感发生人。
+<br>有偿承接（不满意后果自理<span class="pink">(　o=^•ェ•)o　</span>）：
+<br><span class="pink">✦</span> 周边设计（任何形式），美工排版，痛包代扎
+<br><span class="pink">✦</span> 网页设计，音/视频剪辑，前端开发（大概），做低脂小游戏
+<br><span class="pink">✦</span> 坐牢二游代肝，乐高代拼（不会归还成品）
+<br><span class="pink">✦</span> PS图像处理（不会p人）
+
+<br>关于我的爱好：
+<br><span class="pink">✦</span> <span class="del">灵感爆发的时候什么都喜欢什么都会做</span> 玩电脑
+<br><span class="pink">✦</span> 我对象
+
+
+</p>
+		</div>
+		<div class="pink1"> 我是赛博幽灵 ，<br>我会一直看着你✨</div>
+		<div class="circle"></div>
+		</div>
+	</body>
+	<script>
+		const cover=document.querySelector('.cover');
+		let scrolldistance=0;
+		let requestid=null;
+		function update(){
+			const clipvalue=`polygon(0 0,100% 0%,100% ${(scrolldistance<=600)?100-((scrolldistance/600)*60):75}%,0 100%)`;
+			cover.style.clipPath=clipvalue;
+			const opacityvalue=(scrolldistance/600);
+		}
+		function scrollhandler(event){
+			if(event.deltaY<0){
+				scrolldistance=Math.max(0,scrolldistance+event.deltaY);
+			}
+			else{
+				scrolldistance=Math.min(600,scrolldistance+event.deltaY);
+			}
+			if(!requestid){
+				requestid=window.requestAnimationFrame(()=>{
+					update();
+					requestid=null;
+				})
+			}
+		}
+		window.addEventListener('wheel',scrollhandler);
+	</script>
+</html>

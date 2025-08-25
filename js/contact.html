@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=yes"/>
+		<link rel="stylesheet" href="../css/style4.css"/>
+		<title>Contact</title>
+	</head>
+	<body>
+		<div class="main">
+			<div class="navi">
+				<div class="log1"></div>
+				<div class="log2"></div>
+				<div class="log3"></div>
+				<ul class="bot">
+					<li><a  href="./Krypton.html">ABOUT</a></li>
+					<li><a  href="./skill.html">SKILL</a></li>
+					<li><a  href="./sparkle.html">SPARKLE</a></li>
+					<li><a  href="./contact.html">CONTACT</a></li>
+				</ul>
+			</div>
+			<div class="side1"></div>
+			<div class="side2"></div>
+			<div class="massages">
+				<h1>☆留☆言☆板☆</h1>
+				<div class="form">
+					<input type="text" id="username" placeholder="Your nickname~"/>
+					<textarea id="massage" placeholder="Thanks for viewing my page(✿◡‿◡)"></textarea>
+					<button id="submitbtn">留言</button>
+				</div>
+				<div id="massageboard">
+					<div class="massage">
+						<div class="massage-info">
+							<div class="info">
+							<div class="imgbox"></div>
+							<strong>KRYPTON</strong>
+							</div>
+							<span></span>
+						</div>
+						<div class="content">私の箇人サイトを訪問してくれてありがとうございます。頑張ります。</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="t">Click it!</div>
+			<div class="alart" id="alart"></div>
+		</div>
+		
+	
+	
+	</body>
+	<script>
+		document.getElementById('submitbtn').addEventListener('click',function(){
+			var username=document.getElementById('username').value;
+			var massage=document.getElementById('massage').value;
+			if(massage===''){
+				alert('请输入文本');
+				return;
+			}
+			if(username===''){
+				username='匿名';
+			}
+			var massageboard=document.getElementById('massageboard');
+			var newmassage=document.createElement('div');
+			newmassage.classList.add('massage');
+			newmassage.innerHTML='<div class="massage-info"><div class="info"><div class="imgbox"><strong>'+username+'</strong></div><span>发布于:'+getCurrentTime()+'</span></div><div class="content">'+massage+'</div>';
+			massageboard.insertBefore(newmassage,massageboard.firstChild);
+			document.getElementById('username').value='';
+			document.getElementById('massage').value='';
+			
+		});
+		function getCurrentTime(){
+			var now=new Date();
+			var year=now.getFullYear();
+			var month=('0'+(now.getMonth()+1)).slice(-2);
+			var day=('0'+now.getDate()).slice(-2);
+			var hours=('0'+now.getHours()).slice(-2);
+			var minutes=('0'+now.getMinutes()).slice(-2);
+			var seconds=('0'+now.getSeconds()).slice(-2);
+			return year+'/'+month+'/'+day+' '+hours+':'+minutes+':'+seconds;
+		}
+	</script>
+	<script>
+		var alart=document.getElementById('alart');
+		alart.onclick=function(){
+			alert("如有需要请联系3291498010@qq.com\n我会一直看着你");
+		};
+	</script>
+</html>

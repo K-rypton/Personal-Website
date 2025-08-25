@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=yes"/>
+		<link rel="stylesheet" href="../css/style2.css"/>
+		<title>My Skill</title>
+	</head>
+	<body>
+		<div class="main">
+			<div class="navi">
+				<div class="log1"></div>
+				<div class="log2"></div>
+				<div class="log3"></div>
+				<ul class="bot">
+					<li><a  href="./Krypton.html">ABOUT</a></li>
+					<li><a  href="./skill.html">SKILL</a></li>
+					<li><a  href="./sparkle.html">SPARKLE</a></li>
+					<li><a  href="./contact.html">CONTACT</a></li>
+				</ul>
+			</div>
+			<div class="side1"></div>
+			<div class="side2"></div>
+			<div class="box"></div>
+			<div class="menu">
+				<ul class="side" type="none">
+					<div class="b1">
+					<li id="b1"><div class="text3"><span >平面设计</span><br>graphic design</div>
+					<div class="c1" id="c1">
+						<ul type="none">
+							
+							<li id="t1"><button>内容展示</button></li>
+							
+							<div class="slides" id="slides">
+								<ul type="none">
+									<li><img src="../img/镜面-1.jpg" title="FGO咕哒子镜面徽章" /></li>
+									<li><img src="../img/psc (2).png" title="利姆露彩窗透卡" /></li>
+									<li><img src="../img/psc (3).png" title="洛天依彩窗透卡" /></li>
+									<li><img src="../img/psc.png" title="洛天依应援手幅(正面)" /></li>
+									<li><img src="../img/psc (1).png" title="洛天依应援手幅(背面)" /></li>
+									<li><img src="../img/psc (4).png" title="洛天依屏风色纸" /></li>
+									
+								</ul>
+							</div>
+							
+							<li id="t2"><button>工程下载</button>							</li>
+							<div class="d1" id="d1">
+								<ul type="none">
+									<li><a href="..img/F13E326A984752E2D0CF3EE33A0CEFE3 - 副本.zip" download target="_blank">咕哒夫老鼠干图纸（psd）</a></li>
+								</ul>
+							</div>
+						</ul>
+					</div>
+				</li>
+				</div>
+				<div class="b2">
+					<li id="b2"><div class="text4"><span >剪辑</span><br>video editing</div>
+					<div class="c2" id="c2">
+						<ul type="none">
+							<li id='t3'><button>内容展示</button>						</li>
+							<div id="v" class="v">
+								<video src="../img/嵌套序列 01_1.mp4"  width="550px" height="450px" controls type="video/mp4"></video>
+							</div>
+							<li id="t4"><button>工程下载</button>							</li>
+							<div id="d2" class="d2">
+								<ul type="none">
+									<li><a href="../img/gbogh.prproj" download target="_blank">pr工程文件01</a></li>
+								</ul>
+							</div>
+						</ul>
+					</div></li>
+					</div>
+					<div class="b3">
+					<li id="b3"><div class="text5"><span >代码</span><br>code</text>
+					<div class="c3" id="c3">
+						<ul type="none">
+							<li id="t5" ><button>链接直达</button>							</li>
+							<div id="d3" class="d3">
+								<ul type="none">
+									<li><a href="https://github.com/K-rypton/Equation-calculator" target="_blank">方程计算器</a></li>
+									<li><a href="https://github.com/K-rypton/fraction-calculator" target="_blank">分数计算器</a></li>
+								</ul>
+							</div>
+						</ul>
+					</div></li>
+					</div>
+				</ul>
+			</div>
+		</div>
+		
+		<script>
+			var t1=document.querySelector("#t1");
+			var slides=document.querySelector("#slides");
+			t1.onclick=function(){
+				if(slides.style.display==="none"||slides.style.display === ''){
+					slides.style.display="block";
+				}
+					
+				else{
+					slides.style.display="none";
+				}
+			};
+		</script>
+		<script>
+			var t3=document.querySelector("#t3");
+			var v=document.querySelector("#v");
+			t3.onclick=function(){
+				if(v.style.display==="none"||v.style.display === ''){
+					v.style.display="block";
+				}
+					
+				else{
+					v.style.display="none";
+				}
+			};
+		</script>
+		<script>
+			var t2=document.querySelector("#t2");
+			var d1=document.querySelector("#d1");
+			t2.onclick=function(){
+				if(d1.style.display==="none"||d1.style.display === ''){
+					d1.style.display="block";
+				}
+					
+				else{
+					d1.style.display="none";
+				}
+			};
+		</script>
+		<script>
+			var t4=document.querySelector("#t4");
+			var d2=document.querySelector("#d2");
+			t4.onclick=function(){
+				if(d2.style.display==="none"||d2.style.display === ''){
+					d2.style.display="block";
+				}
+					
+				else{
+					d2.style.display="none";
+				}
+			};
+		</script>
+		<script>
+					var t5=document.querySelector("#t5");
+					var d3=document.querySelector("#d3");
+					t5.onclick=function(){
+						if(d3.style.display==="none"||d3.style.display === ''){
+							d3.style.display="block";
+						}
+							
+						else{
+							d3.style.display="none";
+						}
+					};
+				</script>
+	</body>
+	
+</html>
